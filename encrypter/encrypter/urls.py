@@ -18,5 +18,8 @@ from django.urls import path
 from endtoendencryption.views import *
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('',home,name = 'Home')
+    path('',home,name = 'Home'),
+    path('account/register',register,name='registration'),
+    path('account/login',loginfunc,name='login'),
+    path('account/profile/verify',verifyprofilefunc,name = 'verify profile'),
 ]
