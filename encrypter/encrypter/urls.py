@@ -22,4 +22,5 @@ urlpatterns = [
     path('account/register',register,name='registration'),
     path('account/login',loginfunc,name='login'),
     path('account/profile/verify',verifyprofilefunc,name = 'verify profile'),
+    path('decode',decodefunc,name = 'decode function'),
 ]
