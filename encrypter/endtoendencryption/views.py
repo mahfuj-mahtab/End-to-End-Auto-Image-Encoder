@@ -8,6 +8,7 @@ from random import randint, randrange
 from django.contrib.auth import logout
 # Create your views here.
 def home(request):
+    print(request.user)
     return render(request,'index.html')
 def decodefunc(request):
     return render(request,'decode.html')

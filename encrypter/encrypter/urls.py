@@ -23,4 +23,5 @@ urlpatterns = [
     path('account/login',loginfunc,name='login'),
     path('account/profile/verify',verifyprofilefunc,name = 'verify profile'),
     path('decode',decodefunc,name = 'decode function'),
+    path('logout',logout_view,name = 'logout function'),
 ]
