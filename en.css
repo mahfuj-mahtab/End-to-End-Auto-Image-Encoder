@@ -1,0 +1,60 @@
+body{
+background-color: rgb(189, 191, 199);}
+#nav-m {
+    padding-left: 200px;
+    font-size: 30px;
+}
+#op{
+    padding-right: 150px;
+}
+
+
+#lower{
+    padding-left: 22%;
+    padding-top: 30px;
+    font-size: 30px;
+}
+#em{
+    padding-top: 20px;
+    padding-right: 810px;
+    height: 400px;
+}
+#ban{
+    padding-left: 5%;
+    padding-top: 30px;
+    font-size: 30px;
+    height: 300px;
+    width: 500px;
+
+}
+#pic{
+    padding-top: 20px;
+    padding-left: 5%;
+    height: 900px;
+    width: 1000px;
+
+}
+#slide{
+    padding-top: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#inner{
+    padding-left: 17%;
+    padding-top: 30px;
+    font-size: 30px;
+
+}
+#try{
+    font-size: 20px;
+    
+}
+#box{
+    width: 700px;      
+}
+#msg{
+    padding-left: 20%;
+    padding-top: 80px;
+    
+}
