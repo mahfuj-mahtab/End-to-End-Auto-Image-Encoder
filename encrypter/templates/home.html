@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Style/home.css/' %}">
+    <!-- <link rel="stylesheet" href="{% static 'Style/register.css/' %}"> -->
+    <link rel="stylesheet" href="{% static 'Style/responsive.css' %}">
+    <script src="https://kit.fontawesome.com/5d4ee011b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://cdn.tiny.cloud/1/1zij0wqd3jm4joq3q03kl3q4cygh3qb32uvluinxhwcv3cd8/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prism.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap" rel="stylesheet">
+    <script src="{% static 'js/prism.js' %}"></script>
+    <script src="{% static 'js/cursor.js' %}"></script>
+
+    <title>TutorialHubs-Home</title>
+</head>
+<body>
+<div class="header">
+    <div class="main_header">
+        <div class="left_header">
+            <a class="logo_a" href="/"><b>TutorialHubs</b></a> <i class="fa-solid fa-bars bar"></i>
+        </div>
+        <div class="right_header show">
+            <div class="menu ">
+                <div class="menu-style">
+                <ul>
+                    <li class=" "> <span class="material-symbols-outlined custom_icon">
+                        home
+                        </span><a href="/">Home</a></li>
+                    <li><span class="material-symbols-outlined custom_icon">
+                        school
+                        </span> <a href="">Courses</a></li>
+                    <li> <span class="material-symbols-outlined custom_icon">
+                        shopping_cart
+                        </span> <a href="">Shop</a></li>
+           
+                    <li><span class="material-symbols-outlined custom_icon">
+                        article
+                        </span> <a href="/blog">Blog</a></li>
+                    <li><span class="material-symbols-outlined custom_icon">
+                        leaderboard
+                        </span> <a href="/student/leaderboard">LeaderBoard</a></li>
+              
+                  
+                    
+                {% if request.user.is_authenticated %}
+               
+                    <a class="aaa" href="/account/user/profile">
+                    <div class="profile_pic_section" >
+                        <img class="profile_pic_icon" src="{% static 'images/icons/dollar.png' %}" alt="">
+                        <span class="icon_text">{{ point }}k</span>
+                        <img class="profile_pic_icon" src="{% static 'images/icons/diamond.png' %}" alt="">
+                        <span class="icon_text">{{diamond}}k</span>
+
+                        <img class="profile_pic" src="{{student.profile_pic.url}}" alt="">
+                        <img class="profile_pic_arrow" src="{% static 'images/icons/arrow.png' %}" alt="">
+                    </div>
+                    </a>
+                    <a class="logout" href="/account/logout/user">Logout</a>
+                    <!-- <div class="profile_pic_section_hover">
+                        
+                    </div> -->
+                    {% else %}
+                <li><a class="a_log" href="/account/register">Register/Login</a></li>
+                 {%endif %}
+                </ul>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="banner">
+    
+    <!-- <img class="smallicon2" src="/images/icons/2.png" alt=""> -->
+<div class="main_banner">
+
+<div class="left_banner">
+    <h1 class="bannerh1">Welcome To <span style="color: #168199"> Tutorial Hubs</span></h1>
+    <i class="banner_i">A Place For Great Learning</i>
+    <form action="/search/" method="GET">
+        <input type="text" placeholder="Please Enter What You Want To Learn" class="search" name="search"><input class="searchbtn" type="submit" value="Search">
+    </form>
+    <a href="" class="youtube_button">Visit Youtube</a>
+    <a href="" class="shop_button">Shop</a>
+</div>
+<div class="right_banner ani-boxes">
+
+    <img class="banner_img" src="{% static '/images/char.png'%}" alt="">
+
+    <div class="im_div pulse"> </div>
+</div>
+<img class="smallicon1" src="{% static '/images/icons/1.png'%}" alt="">
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

@@ -9,7 +9,7 @@ from django.contrib.auth import logout
 # Create your views here.
 def home(request):
     print(request.user)
-    return render(request,'index.html')
+    return render(request,'home.html')
 def decodefunc(request):
     return render(request,'decode.html')
 def register(request):
