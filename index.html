@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="images/portfolio icon.jpg" />
+    <title>End-to-End-Auto</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/Hvag4uTDi1MDnmVY/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Form Data Submitted :)");
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+    </script>
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- custom cursors  -->
+    <div class="cursor-1"></div>
+    <div class="cursor-2"></div>
+    <div id="menu-bars" class="fas fa-bars"></div>
+    <!-- header section starts  -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-link px-2 link-secondary">Home</a>
+        <a href="/" class="nav-link px-2">Encoder</a>
+        <a href="/" class="nav-link px-2">Decoder</a>
+        <a href="/account/register" class="nav-link px-2">Register</a>
+        <a href="/account/login" class="nav-link px-2">Login</a>
+      </nav>
+      <div class="follow">
+        <a
+          href="https://www.facebook.com/tabassum.maisha.5/"
+          target="_blank"
+          class="fab fa-facebook-f"
+        ></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a
+          href="https://www.instagram.com/tabassumaisha2000/"
+          target="_blank"
+          class="fab fa-instagram"
+        ></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </header>
+    <!-- header section ends -->
+    <!-- contact section starts  -->
+    <section class="contact" id="contact">
+      <h1 class="heading">End-to-End-Auto<span> Image Encoder </span></h1>
+      <div class="row">
+        <form action="" id="myForm">
+          <input
+            type="file"
+            class="form-control-file"
+            id="exampleFormControlFile1"
+          />
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"><h4>Textarea</h4></label>
+              <div id="box">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-secondary" id="sub">Submit</button>
+    </section>
+    <!-- contact section ends -->
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
