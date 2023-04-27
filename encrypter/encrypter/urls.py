@@ -27,6 +27,10 @@ urlpatterns = [
     path('account/profile/verify',verifyprofilefunc,name = 'verify profile'),
     path('encode/',encodefunc,name = 'encode function'),
     path('decode/',decodefunc,name = 'decode function'),
+    path('account/recover',recoverfunc,name = 'recover'),
+    path('account/verify',verifyfunc,name = 'verify'),
+    path('account/change/pass',changepass,name = 'change pass'),
+
     # path('decoded/',decodedfunc,name = 'decoded function'),
     path('logout',logout_view,name = 'logout function'),
 ] + static(settings.MEDIA_URL,

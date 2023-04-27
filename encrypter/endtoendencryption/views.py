@@ -362,7 +362,26 @@ def verifyprofilefunc(request):
             return render(request,'verifyprofile.html')           
     else:
         return redirect("/account/login")
-    
+
+def changepass(request):
+    if(request.method == 'POST'):
+        password = request.POST['password']
+        password2 = request.POST['password2']
+        if(len(password) >= 8):
+            if(password == password2):
+                user = User.objects.get(email = request.session['verify'])
+                user.set_password(password)
+                user.save()
+                print("Pass changed")
+                return redirect('/')
+            else:
+                messages.warning(request,"Sorry Password And Confirm Password Are Not Same")
+                return render(request,'changepass.html')  
+        else:
+            messages.warning(request,"Sorry Password Length Must Be at least 8 char")
+            return render(request,'changepass.html')       
+    else:
+        return redirect("/account/login")       
 def logout_view(request):
     logout(request)
     return redirect("/")
