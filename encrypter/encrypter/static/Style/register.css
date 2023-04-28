@@ -186,13 +186,16 @@ body{
     background-color: #207398;
 }
 .a_login{
-    color: #207398;
+    /* color: #207398;
+     */
+     color: #e38528;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
 }
 .a_forget{
-    color: #207398;
+    /* color: #207398; */
+    color: #e38528;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;

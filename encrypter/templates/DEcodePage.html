@@ -12,21 +12,7 @@
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
-    <script>
-      function SubForm() {
-        $.ajax({
-          url: "https://api.apispreadsheets.com/data/Hvag4uTDi1MDnmVY/",
-          type: "post",
-          data: $("#myForm").serializeArray(),
-          success: function () {
-            alert("Form Data Submitted :)");
-          },
-          error: function () {
-            alert("There was an error :(");
-          },
-        });
-      }
-    </script>
+
     <!-- font awesome cdn link  -->
     <link
       rel="stylesheet"
@@ -70,8 +56,9 @@
     </header>
     <!-- header section ends -->
     <!-- contact section starts  -->
+    {% if request.user.is_authenticated %}
     <section class="contact" id="contact">
-      <h1 class="heading">End-to-End-Auto<span> Image Encoder </span></h1>
+      <h1 class="heading">Steganography<span> Image Encoder </span></h1>
       <div class="row">
         <form action="" id="myForm">
           <div id="msg">
@@ -87,6 +74,9 @@
         </form>
       </div>
     </section>
+    {% else %}
+    <h1 style="color: red;text-align: center;margin-top: 200px">You Need To Login To Encode</h1>
+    {%endif %}
     <!-- contact section ends -->
     <!-- custom js file link  -->
     <script src="{% static 'script.js' %}"></script>
